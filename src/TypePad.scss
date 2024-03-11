@@ -1,0 +1,60 @@
+$gray: #a1a1aa;
+$darkgray: #313140;
+$red: #ef622b;
+$green: #4ade80;
+$black: #101010;
+
+button {
+	cursor: pointer;
+}
+
+.text-container {
+	color: $gray;
+	border-radius: 0.6rem;
+	padding: 1rem;
+
+	max-width: 912px;
+	word-break: break-all;
+
+	p {
+		font: {
+			family: "Open Sans", monospace;
+			size: 1.6rem;
+			weight: 400;
+		}
+	}
+}
+
+.central-aisle {
+	display: flex;
+	items-align: center;
+	gap: 1rem;
+}
+
+.logo-container {
+	background-color: transparent;
+	border: none;
+
+	.logo {
+		fill: $gray;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+.correct {
+	color: $green;
+}
+
+.wrong {
+	color: $red;
+}
