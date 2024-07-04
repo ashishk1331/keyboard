@@ -1,5 +1,6 @@
 import "./TypePad.scss";
 import { useState, useEffect } from "react";
+import Cursor from "./components/Cursor.jsx";
 import useTypings from "./hooks/useTypings.js";
 import {
 	Horse,
@@ -30,12 +31,12 @@ export default function (props) {
 		if(!text) return;
 		
 		let correct = 0;
-		for(let index of text){
-			if(TEXT[index] === text[index]){
+		for(let index in text){
+			if(TEXT[index].toLowerCase() === text[index].toLowerCase()){
 				correct++;
 			}
 		}
-		setPercent((correct / text.length) * 100);
+		setPercent(Math.round((correct / text.length) * 100));
 	}, [text]);
 
 	return (
@@ -78,6 +79,7 @@ export default function (props) {
 							{TEXT[index]}
 						</span>
 					))}
+					<Cursor />
 				</p>
 			</div>
 		</div>
